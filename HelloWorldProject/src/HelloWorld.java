@@ -14,11 +14,27 @@ public class HelloWorld {
 		System.out.println("What is your name?");
 		String name = scanner.nextLine();
 		System.out.println("What is your age?");
+		
 		int age = scanner.nextInt();
+		while(fav < 99)
+		{
+			System.out.println("You inputted an invalid response. What is your favorite number that has more than 3 digits?");
+			age = scanner.nextInt();
+		}
 		System.out.println("What is your favorite number that has more than 3 digits?");
 		int fav = scanner.nextInt();
+		while(fav < 99)
+		{
+			System.out.println("You inputted an invalid response. What is your favorite number that has more than 3 digits?");
+			fav = scanner.nextInt();
+		}
 		System.out.println("What is your cumulative, weighted GPA?");
 		double gpa = scanner.nextDouble();
+		while(gpa < 0.0 || gpa > 5.0)
+		{
+			System.out.println("You inputted an invalid response. What is your cumulative, weighted GPA?");
+			gpa = scanner.nextDouble();
+		}
 		
 		System.out.println("Hello " + name);
 		String congrats = "";
@@ -44,7 +60,7 @@ public class HelloWorld {
 		for(int x = 0; x < fav; x++)
 		{
 			if(x % name.length() == 0)
-				System.out.print(x + " ");
+				System.out.print(x + ", ");
 		}//end for
 		scanner.close();
 	}//end main
