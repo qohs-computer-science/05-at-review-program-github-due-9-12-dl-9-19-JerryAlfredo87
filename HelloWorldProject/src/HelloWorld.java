@@ -16,9 +16,9 @@ public class HelloWorld {
 		System.out.println("What is your age?");
 		
 		int age = scanner.nextInt();
-		while(fav < 99)
+		while(age <= 0)
 		{
-			System.out.println("You inputted an invalid response. What is your favorite number that has more than 3 digits?");
+			System.out.println("You inputted an invalid response. What is your age?");
 			age = scanner.nextInt();
 		}
 		System.out.println("What is your favorite number that has more than 3 digits?");
